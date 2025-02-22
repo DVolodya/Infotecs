@@ -1,4 +1,4 @@
-# Реализация FTP клиента
+# Реализация SFTP клиента
 
 ## Описание
 
@@ -31,7 +31,7 @@
 )
 
 >[!IMPORTANT]
->расположен файл с информацией о доменных адресах в виде JSON подобной
+>Расположен файл с информацией о доменных адресах в виде JSON подобной
 >структуры с уникальными значениями доменов и IP-адресов уже лежит в корневом каталоге.
 >
 
@@ -60,23 +60,23 @@
 
 1. Получение списка пар "домен – адрес" из файла в ***алфавитном порядке***
 
-   ![Домены](![image](https://github.com/user-attachments/assets/fdf3cac9-8892-4f70-9898-d51a84b3b9ef)
+   (![image](https://github.com/user-attachments/assets/fdf3cac9-8892-4f70-9898-d51a84b3b9ef)
 )
 
 2. Получение домена по его **id**
 
-    ![Домен по id](![image](https://github.com/user-attachments/assets/162ba1a4-f682-41a9-96ad-13bcc0ae49d8)
+    (![image](https://github.com/user-attachments/assets/162ba1a4-f682-41a9-96ad-13bcc0ae49d8)
 )
 
 3. Получение id по его **Домену**
 
-   ![Домен но ip](![image](https://github.com/user-attachments/assets/24e88703-4760-4a1a-ac95-1c0784ce5fa2)
+   (![image](https://github.com/user-attachments/assets/24e88703-4760-4a1a-ac95-1c0784ce5fa2)
 ")
 
 
-5. Пары "Домен - адрес" по его **id** или **домену**
+5. Удаление пары "Домен - адрес" по его **id** или **домену**
 
-    ![Удаление по id](![image](https://github.com/user-attachments/assets/499868ac-c741-4ba1-b51a-80bbb01a6e66)
+    (![image](https://github.com/user-attachments/assets/499868ac-c741-4ba1-b51a-80bbb01a6e66)
 )
 
 >[!NOTE]
@@ -85,5 +85,5 @@
  >отображено соответствующее оповещение
 
 
-![Некорректный id](![image](https://github.com/user-attachments/assets/8919205b-168d-4aa5-960c-3b2c743c3e9c)
+(![image](https://github.com/user-attachments/assets/8919205b-168d-4aa5-960c-3b2c743c3e9c)
 )

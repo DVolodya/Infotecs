@@ -70,7 +70,7 @@
 
 3. Получение id по его **Домену**
 
-   (![image](https://github.com/user-attachments/assets/24e88703-4760-4a1a-ac95-1c0784ce5fa2)
+   (![image](https://github.com/user-attachments/assets/f27b4079-926d-4749-8efc-77d84b5f7916)
 ")
 
 

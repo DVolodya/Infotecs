@@ -70,8 +70,8 @@
 
 3. Получение id по его **Домену**
 
-   (![image](https://github.com/user-attachments/assets/f27b4079-926d-4749-8efc-77d84b5f7916)
-")
+   (![image](https://github.com/user-attachments/assets/01f29935-d00f-4088-b989-0af52a380d8c)
+)
 
 
 5. Удаление пары "Домен - адрес" по его **id** или **домену**

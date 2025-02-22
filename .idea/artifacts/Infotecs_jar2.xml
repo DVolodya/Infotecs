@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Infotecs:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/Infotecs_jar2</output-path>
+    <root id="archive" name="Infotecs.jar">
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar" path-in-jar="/" />
+      <element id="module-test-output" name="Infotecs" />
+    </root>
+  </artifact>
+</component>

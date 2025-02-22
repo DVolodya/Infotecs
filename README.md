@@ -27,6 +27,7 @@
 Пользователю будет предложено ввести корректные данные для подключения по ssh.
 
 После ввода корректный данный, пользователю будет предоставлен выбор действий
+
 ![image](https://github.com/user-attachments/assets/03e95a83-172f-424d-9016-b9603f349b8f)
 
 
@@ -93,5 +94,5 @@
  >отображено соответствующее оповещение
 
 
-(![image](https://github.com/user-attachments/assets/8919205b-168d-4aa5-960c-3b2c743c3e9c)
-)
+![image](https://github.com/user-attachments/assets/8919205b-168d-4aa5-960c-3b2c743c3e9c)
+

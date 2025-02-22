@@ -96,3 +96,5 @@
 
 ![image](https://github.com/user-attachments/assets/8919205b-168d-4aa5-960c-3b2c743c3e9c)
 
+##Инструкция по запуску тестов и кратким обоснованием тестов
+

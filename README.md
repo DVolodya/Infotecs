@@ -72,16 +72,20 @@
 
    ![image](https://github.com/user-attachments/assets/cd8b3313-ec9d-40af-98b0-b604130d9e23)
 
+
 4. Добавление пары ***Домен - адрес*
 
    ![image](https://github.com/user-attachments/assets/c162318a-74fa-4a98-a053-8e55c4dfac3f)
+
+   
    ![image](https://github.com/user-attachments/assets/33fbff68-b2b7-44d7-be3a-353b0914aaa1)
 
-5. Удаление пары "Домен - адрес" по его **id** или **домену**
+6. Удаление пары "Домен - адрес" по его **id** или **домену**
 
     ![image](https://github.com/user-attachments/assets/499868ac-c741-4ba1-b51a-80bbb01a6e66)
 
-6. Завершение программы
+7. Завершение программы
+   
    ![image](https://github.com/user-attachments/assets/a2f5fb0e-a6ef-4b80-b5d7-31ccdcf7e6a6)
 
 >[!NOTE]

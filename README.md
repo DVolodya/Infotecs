@@ -11,11 +11,11 @@
    ```sh
    https://github.com/DVolodya/Infotecs
     ```
-2. Перейти в корневую директорию проекта (Infotecs)
+2. Перейти в корневую директорию проекта SFTPClient.jar
    
 3. Запустить исполняемый **jar** файл проекта
    ```sh
-   java -jar target\Infotecs.jar
+   java -jar out/artifacts/Infotecs_jar/SFTPClient.jar
    ```
 ----
 ## Работа с приложением
@@ -98,3 +98,9 @@
 
 ## Инструкция по запуску тестов и кратким обоснованием тестов
 
+1.Перейти в корневую директорию проекта Infotecs_jar_tests
+   
+2. Запустить исполняемый **jar** файл проекта
+   ```sh
+   java -jar out/artifacts/Infotecs_jar_tests/SFTPClientTest.jar
+   ```

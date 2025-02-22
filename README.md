@@ -60,7 +60,7 @@
 
 1. Получение списка пар "домен – адрес" из файла в ***алфавитном порядке***
 
-   (![image](https://github.com/user-attachments/assets/fdf3cac9-8892-4f70-9898-d51a84b3b9ef)
+   (![image](https://github.com/user-attachments/assets/5e84c6f0-06ae-487d-8620-71374c58a2fa)
 )
 
 2. Получение домена по его **id**

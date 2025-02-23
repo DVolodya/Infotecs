@@ -29,11 +29,9 @@ public class SFTPClientTest {
         SFTPClient client = new SFTPClient("test.com", 22, "user", "pass");
         client.addDomain(new Scanner(new StringReader("example.com\n192.168.1.1")));
 
-        // Проверить, добавлена ли пара
         boolean exists = client.isDomainExists("example.com - 192.168.1.1");
         Assert.assertTrue(exists, "Пара должна быть добавлена.");
 
-        // Добавляем дубликат
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream originalOut = System.out;
         System.setOut(new PrintStream(outContent));
@@ -51,13 +49,10 @@ public class SFTPClientTest {
     public void testRemoveDomain() throws IOException {
         SFTPClient client = new SFTPClient("test.com", 22, "user", "pass");
 
-        // Добавляем домен для дальнейшего удаления
         client.addDomain(new Scanner(new StringReader("remove.com\n192.168.1.2")));
 
-        // Удаляем домен
         client.removeDomain(new Scanner(new StringReader("remove.com")));
 
-        // Проверяем, что домена больше нет
         boolean exists = client.isDomainExists("remove.com - 192.168.1.2");
         Assert.assertFalse(exists, "Пара должна быть удалена.");
     }

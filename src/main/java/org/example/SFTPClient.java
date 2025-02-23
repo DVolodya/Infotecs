@@ -23,7 +23,6 @@ public class SFTPClient {
         this.password = password;
     }
 
-    // Метод для подключения к SFTP
     public void connect() throws JSchException {
         JSch jsch = new JSch();
         session = jsch.getSession(username, host, port);
@@ -34,7 +33,6 @@ public class SFTPClient {
         channelSftp.connect();
     }
 
-    // Метод для закрытия соединения
     public void disconnect() {
         if (channelSftp != null) {
             channelSftp.disconnect();
@@ -44,7 +42,6 @@ public class SFTPClient {
         }
     }
 
-    // Метод для запуска клиента
     public void start() {
         try {
             connect();
@@ -72,7 +69,6 @@ public class SFTPClient {
         }
     }
 
-    // Метод для отображения меню
     private void displayMenu() {
         System.out.println("\nВыберите действие:");
         System.out.println("1. Получение списка пар 'домен – адрес'");
@@ -83,13 +79,11 @@ public class SFTPClient {
         System.out.println("6. Завершение работы");
     }
 
-    // Метод для получения выбора пользователя
     private int getUserChoice(Scanner scanner) {
         System.out.print("Ваш выбор: ");
         return scanner.nextInt();
     }
 
-    // Метод для получения списка доменов из файла
     private void getDomains() throws IOException {
         List<String> domains = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
@@ -107,7 +101,6 @@ public class SFTPClient {
         }
     }
 
-    // Метод для получения IP по доменному имени
     private void getIPByDomain(Scanner scanner) {
         System.out.print("Введите доменное имя: ");
         String domain = scanner.next();
@@ -119,7 +112,6 @@ public class SFTPClient {
         }
     }
 
-    // Метод для получения доменного имени по IP-адресу
     private void getDomainByIP(Scanner scanner) {
         System.out.print("Введите IP-адрес: ");
         String ipAddress = scanner.next();
@@ -131,7 +123,6 @@ public class SFTPClient {
         }
     }
 
-    // Метод для добавления домена и IP в файл
     protected void addDomain(Scanner scanner) throws IOException {
         System.out.print("Введите доменное имя: ");
         String domain = scanner.next();
@@ -156,7 +147,6 @@ public class SFTPClient {
         }
     }
 
-    // Метод для удаления домена
     protected void removeDomain(Scanner scanner) throws IOException {
         System.out.print("Введите доменное имя или IP-адрес для удаления: ");
         String input = scanner.next();
@@ -187,7 +177,6 @@ public class SFTPClient {
         }
     }
 
-    // Валидация IP-адреса
     protected boolean isValidIP(String ip) {
         String ipPattern =
                 "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\."
@@ -197,7 +186,6 @@ public class SFTPClient {
         return ip.matches(ipPattern);
     }
 
-    // Проверка существования домена в файле
     protected boolean isDomainExists(String entry) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -210,7 +198,6 @@ public class SFTPClient {
         return false; // Пара не найдена
     }
 
-    // Запуск клиента
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите адрес SFTP-сервера: ");

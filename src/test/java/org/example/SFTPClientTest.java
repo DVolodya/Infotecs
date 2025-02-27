@@ -56,4 +56,5 @@ public class SFTPClientTest {
         boolean exists = client.isDomainExists("remove.com - 192.168.1.2");
         Assert.assertFalse(exists, "Пара должна быть удалена.");
     }
+
 }

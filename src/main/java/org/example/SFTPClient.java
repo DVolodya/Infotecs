@@ -4,6 +4,7 @@ package org.example;
 import com.jcraft.jsch.*;
 import java.io.*;
 import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.*;
 
 public class SFTPClient {
@@ -53,13 +54,27 @@ public class SFTPClient {
                 int choice = getUserChoice(scanner);
 
                 switch (choice) {
-                    case 1: getDomains(); break;
-                    case 2: getIPByDomain(scanner); break;
-                    case 3: getDomainByIP(scanner); break;
-                    case 4: addDomain(scanner); break;
-                    case 5: removeDomain(scanner); break;
-                    case 6: disconnect(); System.out.println("Выход..."); return;
-                    default: System.out.println("Неверный выбор. Попробуйте снова.");
+                    case 1:
+                        getDomains();
+                        break;
+                    case 2:
+                        getIPByDomain(scanner);
+                        break;
+                    case 3:
+                        getDomainByIP(scanner);
+                        break;
+                    case 4:
+                        addDomain(scanner);
+                        break;
+                    case 5:
+                        removeDomain(scanner);
+                        break;
+                    case 6:
+                        disconnect();
+                        System.out.println("Выход...");
+                        return;
+                    default:
+                        System.out.println("Неверный выбор. Попробуйте снова.");
                 }
             }
         } catch (JSchException e) {
@@ -103,14 +118,21 @@ public class SFTPClient {
 
     private void getIPByDomain(Scanner scanner) {
         System.out.print("Введите доменное имя: ");
-        String domain = scanner.next();
+        String domain = scanner.nextLine().trim();
+        if (domain.isEmpty()) {
+            System.out.println("Ошибка: доменное имя не может быть пустым.");
+            return;
+        }
         try {
             InetAddress ip = InetAddress.getByName(domain);
-            System.out.println("IP-адрес: " + ip.getHostAddress());
-        } catch (Exception e) {
+            System.out.println("IP-адрес для " + domain + " : " + ip.getHostAddress());
+        } catch (UnknownHostException e) {
             System.out.println("Не удалось получить IP-адрес для " + domain + ": " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Произошла ошибка: " + e.getMessage());
         }
     }
+
 
     private void getDomainByIP(Scanner scanner) {
         System.out.print("Введите IP-адрес: ");
@@ -121,7 +143,10 @@ public class SFTPClient {
         } catch (Exception e) {
             System.out.println("Не удалось получить доменное имя для " + ipAddress + ": " + e.getMessage());
         }
-    }
+
+
+
+}
 
     protected void addDomain(Scanner scanner) throws IOException {
         System.out.print("Введите доменное имя: ");
